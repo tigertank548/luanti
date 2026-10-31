@@ -562,8 +562,10 @@ void TouchControls::translateEvent(const SEvent &event)
 			// update camera_yaw and camera_pitch
 			const double d = g_settings->getFloat("touchscreen_sensitivity", 0.001f, 10.0f)
 					* 6.0f / RenderingEngine::getDisplayDensity();
+
+			const double pitch_direction = g_settings->getBool("invert_touchscreen") ? -1.0 : 1.0;
 			m_camera_yaw_change -= dir_free.X * d;
-			m_camera_pitch_change += dir_free.Y * d;
+			m_camera_pitch_change += dir_free.Y * d * pitch_direction;
 
 			if (dir_free_original.getLengthSQ() > touch_threshold_sq)
 				m_move_has_really_moved = true;

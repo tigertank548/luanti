@@ -552,6 +552,7 @@ void set_default_settings()
 	settings->setDefault("dpi_change_notifier", "0"); // (not a real setting)
 
 	settings->setDefault("touch_layout", "");
+	settings->setDefault("invert_touchscreen", "false");
 	settings->setDefault("touchscreen_sensitivity", "0.2");
 	settings->setDefault("touchscreen_threshold", "20");
 	settings->setDefault("touch_long_tap_delay", "400");

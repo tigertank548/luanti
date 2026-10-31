@@ -371,6 +371,11 @@ invert_hotbar_mouse_wheel (Hotbar: Invert mouse wheel direction) bool false
 #    Requires: touch_support
 touch_controls (Touchscreen controls) enum auto auto,true,false
 
+#    Invert vertical touchscreen camera movement.
+#
+#    Requires: touchscreen
+invert_touchscreen (Invert touchscreen camera) bool false
+
 #    The kind of digging/placing controls used.
 #
 #    * Tap
